@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Don't Stalk Me</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      margin-top: 20%;
+      animation: flicker 0.1s infinite;
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    h1 {
+      font-size: 4em;
+      text-shadow: 0 0 10px red;
+    }
+    p {
+      color: white;
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DON'T STALK ME</h1>
+  <p>Leave. Now.</p>
+  <script>
+    setTimeout(() => {
+      document.body.innerHTML += '<p style="color: white;">I can see you.</p>';
+      let audio = new Audio("https://www.myinstants.com/media/sounds/run.mp3");
+      audio.play();
+    }, 4000);
+  </script>
+</body>
+</html>
